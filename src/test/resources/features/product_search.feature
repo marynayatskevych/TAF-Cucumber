@@ -11,5 +11,11 @@ Feature: Product search functionality
     Then The product page should display title containing "<searchTerm>"
 
     Examples:
-      | searchTerm |
-      | asus       |
+      | searchTerm  |
+      | asus        |
+      | acer        |
+      | samsung     |
+      | xiaomi      |
+      | iphone      |
+      | hp          |
+      | dell        |
