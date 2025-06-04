@@ -3,7 +3,6 @@ package pages;
 import core.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;

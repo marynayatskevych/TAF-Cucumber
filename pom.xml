@@ -22,7 +22,6 @@
         <commons-io.version>2.17.0</commons-io.version>
         <allure-maven.version>2.10.0</allure-maven.version>
         <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
-
     </properties>
     <dependencies>
         <dependency>
@@ -39,6 +38,16 @@
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>${webdrivermanager.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.epam.reportportal</groupId>
+            <artifactId>agent-java-testng</artifactId>
+            <version>5.4.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.epam.reportportal</groupId>
+            <artifactId>logger-java-log4j</artifactId>
+            <version>5.1.7</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -66,10 +75,26 @@
             <version>${commons-io.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>${testng.version}</version>
-            <scope>compile</scope>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.20.1</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.20.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>gherkin</artifactId>
+            <version>28.0.0</version>
         </dependency>
     </dependencies>
     <build>
@@ -79,19 +104,10 @@
                 <artifactId>allure-maven</artifactId>
                 <version>${allure-maven.version}</version>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire-plugin.version}</version>
-                <configuration>
-                    <properties>
-                        <property>
-                            <name>listener</name>
-                            <value>io.qameta.allure.testng.AllureTestNg</value>
-                        </property>
-                    </properties>
-                </configuration>
             </plugin>
         </plugins>
     </build>
